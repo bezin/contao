@@ -77,7 +77,7 @@ $GLOBALS['TL_DCA']['tl_style'] = array
 			'headerFields'            => array('name', 'tstamp', 'media'),
 			'child_record_callback'   => array('StyleSheets', 'compileDefinition')
 		),
-        'restore' => array
+        'undo' => array
         (
             'fields' => array('selector')
         ),
