@@ -156,7 +156,7 @@ $GLOBALS['TL_DCA']['tl_comments'] = array
 		(
 			'sorting'                 => true,
 			'filter'                  => true,
-			'flag'                    => 8,
+			'flag'                    => DataContainer::SORT_MONTH_DESC,
 			'eval'                    => array('rgxp'=>'datim'),
 			'sql'                     => "varchar(64) NOT NULL default ''"
 		),

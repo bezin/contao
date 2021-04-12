@@ -88,7 +88,7 @@ $GLOBALS['TL_DCA']['tl_undo'] = array
 		'tstamp' => array
 		(
 			'sorting'                 => true,
-			'flag'                    => 6,
+			'flag'                    => DataContainer::SORT_DAY_DESC,
 			'sql'                     => "int(10) unsigned NOT NULL default 0"
 		),
 		'fromTable' => array
