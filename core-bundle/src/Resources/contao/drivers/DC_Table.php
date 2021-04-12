@@ -212,7 +212,7 @@ class DC_Table extends DataContainer implements \listable, \editable
 		// Get the IDs of all root records (tree view)
 		if ($this->treeView)
 		{
-			$table = ($GLOBALS['TL_DCA'][$this->strTable]['list']['sorting']['mode'] ?? null) == 6 ? $this->ptable : $this->strTable;
+			$table = ($GLOBALS['TL_DCA'][$this->strTable]['list']['sorting']['mode'] ?? null) == self::MODE_CHILD_TREE ? $this->ptable : $this->strTable;
 
 			// Unless there are any root records specified, use all records with parent ID 0
 			if (!isset($GLOBALS['TL_DCA'][$table]['list']['sorting']['root']) || $GLOBALS['TL_DCA'][$table]['list']['sorting']['root'] === false)
@@ -6048,11 +6048,11 @@ class DC_Table extends DataContainer implements \listable, \editable
 				$remoteNew = $objParent->value;
 			}
 		}
-		elseif (\in_array($mode, array(1, 2)))
+		elseif (\in_array($mode, array(self::SORT_INITIAL_LETTER_ASC, self::SORT_INITIAL_LETTER_DESC)))
 		{
 			$remoteNew = $value ? ucfirst(Utf8::substr($value, 0, 1)) : '-';
 		}
-		elseif (\in_array($mode, array(3, 4)))
+		elseif (\in_array($mode, array(self::SORT_INITIAL_TWO_LETTERS_ASC, self::SORT_INITIAL_TWO_LETTERS_DESC)))
 		{
 			if (!isset($GLOBALS['TL_DCA'][$this->strTable]['fields'][$field]['length']))
 			{
