@@ -47,7 +47,7 @@ $GLOBALS['TL_DCA']['tl_opt_in'] = array
 	(
 		'sorting' => array
 		(
-			'mode'                    => 2,
+			'mode'                    => DataContainer::MODE_SWITCHABLE_FIELD,
 			'fields'                  => array('createdOn DESC'),
 			'panelLayout'             => 'filter;sort,search,limit'
 		),

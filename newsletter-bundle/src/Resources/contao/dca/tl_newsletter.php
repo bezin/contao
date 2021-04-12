@@ -51,7 +51,7 @@ $GLOBALS['TL_DCA']['tl_newsletter'] = array
 	(
 		'sorting' => array
 		(
-			'mode'                    => 4,
+			'mode'                    => DataContainer::MODE_CHILD_RECORD,
 			'fields'                  => array('sent', 'date'),
 			'headerFields'            => array('title', 'jumpTo', 'tstamp', 'sender'),
 			'panelLayout'             => 'filter;sort,search,limit',

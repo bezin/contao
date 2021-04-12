@@ -56,7 +56,7 @@ $GLOBALS['TL_DCA']['tl_faq'] = array
 	(
 		'sorting' => array
 		(
-			'mode'                    => 4,
+			'mode'                    => DataContainer::MODE_CHILD_RECORD,
 			'fields'                  => array('sorting'),
 			'panelLayout'             => 'filter;sort,search,limit',
 			'headerFields'            => array('title', 'headline', 'jumpTo', 'tstamp', 'allowComments'),

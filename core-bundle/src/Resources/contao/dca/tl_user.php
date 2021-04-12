@@ -58,7 +58,7 @@ $GLOBALS['TL_DCA']['tl_user'] = array
 	(
 		'sorting' => array
 		(
-			'mode'                    => 2,
+			'mode'                    => DataContainer::MODE_SWITCHABLE_FIELD,
 			'fields'                  => array('dateAdded'),
 			'flag'                    => 1,
 			'panelLayout'             => 'filter;sort,search,limit'

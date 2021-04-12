@@ -57,7 +57,7 @@ $GLOBALS['TL_DCA']['tl_theme'] = array
 	(
 		'sorting' => array
 		(
-			'mode'                    => 2,
+			'mode'                    => DataContainer::MODE_SWITCHABLE_FIELD,
 			'fields'                  => array('name'),
 			'flag'                    => 1,
 			'panelLayout'             => 'sort,search,limit'
