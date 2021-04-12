@@ -140,7 +140,7 @@ $GLOBALS['TL_DCA']['tl_faq'] = array
 		(
 			'label'                   => &$GLOBALS['TL_LANG']['MSC']['sorting'],
 			'sorting'                 => true,
-			'flag'                    => 11,
+			'flag'                    => DataContainer::SORT_ASC,
 			'sql'                     => "int(10) unsigned NOT NULL default 0"
 		),
 		'tstamp' => array
